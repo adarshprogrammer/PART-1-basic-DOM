@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>change content</title>
+    <style>
+        button{color:blue;}
+        h1{display:block}
+    </style>
+</head>
+<body ><center>
+   <h1 id="msg" style="color:black;font-family:monospace;">Hello! friends how are you</h1>
+   <div>
+       <button id="SH">HIDE</button>
+        <button id="color">color change</button>
+        <button id="style">Text Style Change</button>
+</div></center>
+    <script>
+       var Msg=document.getElementById('msg')
+    document.getElementById('SH').onclick=(()=>{
+       if(Msg.style.display=="none")
+         {   
+             Msg.style.display="block";
+             document.getElementById('SH').innerHTML="HIDE";
+         }
+   else 
+        {
+         Msg.style.display="none";
+         document.getElementById('SH').innerHTML="SHOW";
+         }
+    
+    })
+    document.getElementById('color').onclick=(()=>{
+        
+    
+       
+        if(Msg.style.color=="black")
+         {   
+            Msg.style.color="blue";
+            
+         }
+  else if(Msg.style.color=="blue")
+        {
+            Msg.style.color="red";
+         }
+       else  if(Msg.style.color=="red")
+         {
+            Msg.style.color="green";
+         }
+       else  if(Msg.style.color="green")
+         {
+            Msg.style.color="black";
+         }
+        
+        
+    })
+    document.getElementById('style').onclick=(()=>{
+    if(Msg.style.fontFamily=="monospace")
+    {
+        Msg.style.fontFamily="serif";
+    }
+    else if(Msg.style.fontFamily=="serif")
+   {
+    Msg.style.fontFamily="sans-serif";
+   
+   }
+
+   else if(Msg.style.fontFamily=="sans-serif")
+   {
+    Msg.style.fontFamily="Helvetica";
+   
+   }
+   else if(Msg.style.fontFamily=="Helvetica")
+   {
+    Msg.style.fontFamily="monospace";
+   }
+})
+    
+    </script>   
+</body>
+</html>
